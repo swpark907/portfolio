@@ -1,0 +1,122 @@
+:root {
+    /* Color */
+    --color-darkgrey: #1f2029;
+    --color-violate-theme: #856b9d;
+    --color-white: white;
+
+    /* Font-size */
+    --font-small: 8px;
+    --font-medium: 16px;
+    --font-large: 22px;
+    --font-title: 4vw;
+
+    /* Space */
+    --base-space: 8px;
+}
+
+body {
+    margin: 0px;
+    /* color: var(--color-white); */
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: var(--font-title);
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.description {
+    font-size: var(--font-large);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    margin-right: var(--base-space);
+    padding: var(--base-space);
+    color: var(--color-white);
+}
+
+#navbar__logo img {
+    width: 30px;
+    padding: var(--base-space);
+}
+
+#navbar ul li:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+/* Home Section */
+#home {
+    color: var(--color-white);
+    background: url(img/background-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about {
+    background-color: var(--color-violate-theme);
+}
+
+#works {
+    background-color: var(--color-violate-theme);
+}
+
+/* About Section */
+
+#about__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(var(--base-space)*3);
+}
+
+#aboutBox {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#myPicture {
+    background: url(img/mypicture.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 350px;
+    height: 500px;
+    margin-left: var(--base-space);
+}
+
+
+/* Skills Section */
+/* Works Section */
+/* Contact Section */

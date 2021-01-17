@@ -14,51 +14,66 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- Home Section -->
-    <section class="home">
-        <div class="navbar">
-            <div class="navbar__logo"><img src="img/favicon.png" alt="logo"></div>
-            <div class="navbar_list">
-                <ul class="list__container">
-                    <li class="navbar__list__items"><a href="#">Home</a></li>
-                    <li class="navbar__list__items"><a href="#">About</a></li>
-                    <li class="navbar__list__items"><a href="#">Skills</a></li>
-                    <li class="navbar__list__items"><a href="#">Works</a></li>
-                    <li class="navbar__list__items"><a href="#">Contact</a></li>
-                </ul>
-            </div>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div id="navbar__logo"><a href="#"><img src="img/favicon.png" alt="logo"></a></div>
+        <div id="navbar_list">
+            <ul id="list__container">
+                <li class="navbar__list__items">Home</li>
+                <li class="navbar__list__items">About</li>
+                <li class="navbar__list__items">Skills</li>
+                <li class="navbar__list__items">Works</li>
+                <li class="navbar__list__items">Contact</li>
+            </ul>
         </div>
-        <div class="title">James Park</div>
-        <div class="description">front-end developer</div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 class="title">James Park</h1>
+        <span class="description">front-end developer</span>
     </section>
     
     <!-- About Section -->
-    <section class="about">
-        <div class="title"></div>
-        <div class="aboutbox"></div>
-        <div class="mypicture"></div>
+    <section id="about">
+        <h1 class="title">about</h1>
+        <span class="description">Lorem ipsum dolor sit.</span>
+        <div id="about__container">
+            <ul id="aboutBox">
+                
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                
+            </ul>
+            <div id="myPicture"></div>
+        </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <div class="skillsbox">
+    <section id="skills">
+        <h1 class="title">skills</h1>
+        <span class="description">Lorem ipsum dolor sit.</span>
+        <div class="skillsBox">
             <div class="skill html">
-                <div class="skill__name"></div>
+                <span class="skill__name">html</span>
                 <div class="skill__statbar"></div>
                 <span class="skill__percentage"></span>
             </div>
             <div class="skill css">
-                <div class="skill__name"></div>
+                <span class="skill__name">css</span>
                 <div class="skill__statbar"></div>
                 <span class="skill__percentage"></span>
             </div>
             <div class="skill javascript">
-                <div class="skill__name"></div>
+                <span class="skill__name">javascript</span>
                 <div class="skill__statbar"></div>
                 <span class="skill__percentage"></span>
             </div>
             <div class="skill react">
-                <div class="skill__name"></div>
+                <span class="skill__name">react</span>
                 <div class="skill__statbar"></div>
                 <span class="skill__percentage"></span>
             </div>
@@ -73,8 +88,9 @@
     </section>
 
     <!-- Works Section -->
-    <section class="wokrs">
-        <div class="title">Works</div>
+    <section id="works">
+        <h1 class="title">Works</h1>
+        <span class="description">Lorem ipsum dolor sit.</span>
         <div class="project__container">
             <div class="project">
                 <div class="project__name"></div>
@@ -93,8 +109,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="title">contact</div>
+    <section id="contact">
+        <h1 class="title">contact</h1>
+        <span class="description">Lorem ipsum dolor sit.</span>
         <input type="text" id="contact__name" placeholder="NAME">
         <input type="email" id="contact__email" placeholder="E-MAIL">
         <input type="text" id="contact__message" placeholder="MESSAGE">
