@@ -14,6 +14,13 @@
     --base-space: 8px;
 }
 
+/* Universal tags */
+* {
+    box-sizing: border-box;
+}
+
+/* Typhography */
+
 body {
     margin: 0px;
     /* color: var(--color-white); */
@@ -77,9 +84,7 @@ section {
 /* Home Section */
 #home {
     color: var(--color-white);
-    background: url(img/background-image.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: center/cover no-repeat url(img/background-image.png);
 }
 
 #about {
@@ -120,3 +125,11 @@ section {
 /* Skills Section */
 /* Works Section */
 /* Contact Section */
+#contact {
+    height: 80vh;
+}
+
+#footer {
+    background-color: var(--color-darkgrey);
+    height: 20vh;
+}
