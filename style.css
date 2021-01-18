@@ -4,6 +4,7 @@
     --color-lightgrey: #8f8e8e;
     --color-grey: #5c5c5c;
     --color-violate-theme: #856b9d;
+    --color-light-violate: #c998f7;
     --color-white: white;
     --color-orange: rgb(255, 183, 49);
 
@@ -55,7 +56,14 @@ section {
     align-items: center;
     text-align: center;
     height: 100vh;
+}
 
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
 }
 
 .section__container {
@@ -130,26 +138,29 @@ button {
 
 #about {
     background-color: var(--color-violate-theme);
+    color: var(--color-white);
 }
 
 #works {
     background-color: var(--color-violate-theme);
+    color: var(--color-white);
 }
 
 /* About Section */
 
 #about__container {
     display: flex;
-
     margin-top: calc(var(--base-space)*3);
 }
 
 #aboutBox {
+    margin-right: 40px;
     width: 600px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: var(--font-large);
 
 }
 
@@ -175,7 +186,7 @@ button {
 }
 
 .skillsBox__left {
-    padding: var(--base-space);
+    padding: 20px;
     flex-basis: 60%;
     background-color: var(--color-darkgrey);
 }
@@ -188,6 +199,7 @@ button {
 .skill__description {
     display: flex;
     justify-content: space-between;
+    padding: var(--base-space) 0;
 }
 
 .skillsBox__right {
@@ -210,21 +222,37 @@ button {
 
 .skill__value {
     height: 3px;
-    background-color: var(--color-orange);
+    background-color: var(--color-light-violate);
 }
 
 .toolsbox,
 .etcbox {
-    padding: 10px;
+    padding: 15px;
+    height: 50%;
 }
 
 /* Works Section */
 /* Contact Section */
 #contact {
-    height: 80vh;
+    height: 85vh;
+}
+
+#contact__Btn {
+    margin-top: 15px;
+    font-size: var(--font-medium);
+    padding: 10px;
+    text-transform: uppercase;
+    border: solid 2px var(--color-violate-theme);
+    color: var(--color-violate-theme);
+    transition: all var(--animation-duration) ease;
+}
+
+#contact__Btn:hover {
+    background-color: var(--color-violate-theme);
+    color: var(--color-white);
 }
 
 #footer {
     background-color: var(--color-darkgrey);
-    height: 20vh;
+    height: 15vh;
 }
