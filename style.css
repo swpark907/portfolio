@@ -23,6 +23,9 @@
 
     /* border-radius */
     --radius: 4px;
+
+    /* Animation-Duration */
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -50,6 +53,8 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* max-width: 1200px;
+    margin: auto; */
 }
 
 button {
@@ -90,6 +95,7 @@ button {
     color: var(--color-white);
     cursor: pointer;
     border-radius: var(--radius);
+    transition: var(--animation-duration) ease;
 }
 
 #navbar ul li.active {
@@ -99,8 +105,6 @@ button {
 
 #navbar ul li:hover {
     background-color: var(--color-violate-theme);
-    transform: scale(1.1);
-    transition-duration: 0.2s;
 }
 
 #navbar__logo img {
@@ -128,7 +132,7 @@ button {
 
 #about__container {
     display: flex;
-    justify-content: space-between;
+
     margin-top: calc(var(--base-space)*3);
 }
 
