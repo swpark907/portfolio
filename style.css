@@ -5,6 +5,7 @@
     --color-grey: #5c5c5c;
     --color-violate-theme: #856b9d;
     --color-white: white;
+    --color-orange: rgb(255, 183, 49);
 
     /* Font-size */
     --font-small: 8px;
@@ -52,9 +53,15 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
-    /* max-width: 1200px;
-    margin: auto; */
+
+}
+
+.section__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
 }
 
 button {
@@ -65,6 +72,7 @@ button {
 }
 
 .title {
+
     font-size: var(--font-title);
     text-transform: uppercase;
     margin: 0px;
@@ -157,6 +165,59 @@ button {
 
 
 /* Skills Section */
+
+.skillsBox {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-lightgrey);
+    color: var(--color-white);
+    margin: 30px 0;
+}
+
+.skillsBox__left {
+    padding: var(--base-space);
+    flex-basis: 60%;
+    background-color: var(--color-darkgrey);
+}
+
+.skill {
+    padding: 10px 40px;
+    margin-bottom: 24px;
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillsBox__right {
+    flex-basis: 40%;
+}
+
+.toolsbox {
+    background-color: var(--color-grey);
+}
+
+.innertitle {
+    font-size: var(--font-large);
+}
+
+.skill__progressBar {
+    background-color: var(--color-grey);
+    width: 100%;
+    height: 3px;
+}
+
+.skill__value {
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.toolsbox,
+.etcbox {
+    padding: 10px;
+}
+
 /* Works Section */
 /* Contact Section */
 #contact {
