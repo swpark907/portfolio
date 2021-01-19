@@ -2,7 +2,7 @@
     /* Color */
     --color-darkgrey: #1f2029;
     --color-grey: #5c5c5c;
-    --color-lightgrey: #8f8e8e;
+    --color-light-grey: #8f8e8e;
     --color-light-white: rgb(219, 219, 219);
     --color-white: white;
     --color-violate-theme: #856b9d;
@@ -49,6 +49,10 @@ a {
     color: var(--color-white);
     text-decoration: none;
     text-transform: uppercase;
+}
+
+p {
+    margin: 0px;
 }
 
 section {
@@ -139,12 +143,9 @@ button {
     background: center/cover no-repeat url(img/background-image.png);
 }
 
-#about {
-    background-color: var(--color-violate-theme);
-    color: var(--color-white);
-}
-
-#work {
+#about,
+#work,
+#contact {
     background-color: var(--color-violate-theme);
     color: var(--color-white);
 }
@@ -183,7 +184,7 @@ button {
 .skillsBox {
     display: flex;
     width: 100%;
-    background-color: var(--color-lightgrey);
+    background-color: var(--color-light-grey);
     color: var(--color-white);
     margin: 30px 0;
 }
@@ -338,13 +339,51 @@ button {
     text-align: center;
     line-height: 250px;
     font-size: var(--font-large);
-    color: var(--color-lightgrey);
+    color: var(--color-light-grey);
     background-color: var(--color-darkgrey);
     opacity: 0.8;
     margin-top: 20px;
 }
 
+/* Testimonial Section */
 
+.testimonial {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-light-white);
+    padding: var(--base-space);
+    margin-bottom: var(--base-space);
+}
+
+.testimonial.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.testimonial__speech-bubble {
+    background-color: var(--color-light-grey);
+    border-radius: var(--radius);
+    color: var(--color-light-white);
+    padding: var(--base-space);
+}
+
+.testimonial__speech-bubble a {
+    color: var(--color-white);
+}
+
+.testimonial__picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.testimonial:nth-child(odd) .testimonial__picture {
+    margin-right: var(--base-space);
+}
+
+.testimonial:nth-child(even) .testimonial__picture {
+    margin-left: var(--base-space);
+}
 
 /* Contact Section */
 #contact {
