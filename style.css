@@ -23,7 +23,7 @@
     --font-normal-weight: 400;
 
     /* Space */
-    --base-space: 8px;
+    --base-space: 20px;
 
     /* border-radius */
     --radius: 4px;
@@ -86,17 +86,20 @@ button {
     outline: none;
 }
 
-.title {
-
+h1 {
     font-size: var(--font-title);
     text-transform: uppercase;
     margin: 0px;
 }
 
-.description {
+h2 {
     font-size: var(--font-large);
     font-weight: bolder;
     text-transform: uppercase;
+}
+
+h3 {
+    font-size: var(--font-medium);
 }
 
 #navbar {
@@ -113,8 +116,8 @@ button {
 
 #navbar ul li {
     list-style: none;
-    margin-right: calc(var(--base-space)*2);
-    padding: var(--base-space) calc(var(--base-space)*2);
+    margin-right: 16px;
+    padding: 8px 16px;
     color: var(--color-white);
     cursor: pointer;
     border-radius: var(--radius);
@@ -132,7 +135,8 @@ button {
 
 #navbar__logo img {
     width: 45px;
-    padding: var(--base-space);
+    padding: 8px;
+    margin-left: 8px;
 }
 
 
@@ -169,7 +173,7 @@ button {
 }
 
 #myPicture {
-    background: center/cover url(img/mypicture.jpg) no-repeat;
+    background: center/cover url(img/mypicture2.jpg) no-repeat;
     border-radius: 50%;
     background-size: 550px 500px;
     border: solid 1px var(--color-white);
@@ -396,18 +400,56 @@ button {
     font-size: var(--font-medium);
     padding: 10px;
     text-transform: uppercase;
-    border: solid 2px var(--color-violate-theme);
-    color: var(--color-violate-theme);
+    border: solid 2px var(--color-white);
+    color: var(--color-white);
     transition: all var(--animation-duration) ease;
 }
 
 #contact__Btn:hover {
-    background-color: var(--color-violate-theme);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-violate-theme);
+}
+
+#contact__name,
+#contact__email,
+#contact__message {
+    font-size: var(--font-medium);
+    width: 100%;
+    padding: 10px;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+#contact__message {
+    height: 200px;
 }
 
 #footer {
     min-height: 0;
     background-color: var(--color-darkgrey);
     height: 15vh;
+    color: var(--color-white);
+}
+
+#footer>.section__container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-left: var(--base-space);
+}
+
+.icon i {
+    font-size: var(--font-large);
+    margin-left: var(--base-space);
+    padding: 4px;
+}
+
+.icon i:hover {
+    color: var(--color-light-violate);
+    cursor: pointer;
 }
