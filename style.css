@@ -494,4 +494,13 @@ h3 {
         height: 300px;
         margin: 0 0 var(--base-space) 0;
     }
+
+    .project {
+        flex-grow: 1;
+    }
+
+    .testimonial__picture {
+        width: 150px;
+        height: 150px;
+    }
 }
