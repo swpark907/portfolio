@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
     
 })
 
+
 // Screen move to section when user click Button
 
 const navbarMenu = document.querySelector('#navbar__list');
@@ -25,7 +26,19 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null) {
         return;
     }
-    console.log(event.target.dataset.link);
+
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: 'smooth'});
+
+})
+
+// Turn home section to transparent
+
+const homeContainer = document.querySelector('.home__container');
+
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+    homeContainer.style.opacity = 1 - window.scrollY * 2 / homeHeight;
+
 })
