@@ -108,6 +108,14 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px;
+}
+
+#navbar.navbar__dark {
+    background-color: var(--color-darkgrey);
+    transition: all calc(var(--animation-duration)*1.5) ease-in-out;
+    z-index: 1;
+    padding: 0;
 }
 
 #navbar ul {
@@ -134,9 +142,9 @@ h3 {
 }
 
 #navbar__logo img {
-    width: 45px;
-    padding: 8px;
-    margin: var(--base-space);
+    width: 30px;
+
+    margin: 8px;
     margin-left: 8px;
 }
 
