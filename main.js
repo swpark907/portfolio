@@ -12,10 +12,10 @@ document.addEventListener('scroll', () => {
         navBar.classList.remove('navbar__dark')
     }
     
-})
+});
 
 
-// Screen move to section when user click Button
+// Screen move to section when user click menu Button
 
 const navbarMenu = document.querySelector('#navbar__list');
 navbarMenu.addEventListener('click', (event) => {
@@ -30,7 +30,7 @@ navbarMenu.addEventListener('click', (event) => {
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: 'smooth'});
 
-})
+});
 
 // Turn home section to transparent
 
@@ -41,4 +41,68 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     homeContainer.style.opacity = 1 - window.scrollY * 2 / homeHeight;
 
+});
+
+// Go to top section when click the arrow button
+const arrow = document.querySelector('.arrow');
+
+document.addEventListener('scroll', () => { // if scroll under the home section, display the button
+    if(window.scrollY > homeHeight/3){
+        arrow.classList.add('visible');
+    } else{
+        arrow.classList.remove('visible');
+    }
+});
+
+arrow.addEventListener('click', () => { // if click the button, go to home section
+    scrollIntoView('#home');
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+};
+
+// Filtering works
+const categoriesContainer = document.querySelector('.work__categories');
+
+categoriesContainer.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    
+    if(filter == null) {
+        return;         
+    }    
+    projectContainer.classList.add('anim-out');
+    projects.forEach((project) => {
+        setTimeout(() => {
+            if (filter === '*' || project.dataset.type === filter) {
+                project.style.display = 'flex';                           
+            }
+            else{
+                project.style.display = 'none';
+            }
+            projectContainer.classList.remove('anim-out');
+        }, 300);
+    })
 })
+
+const projectContainer = document.querySelector('.project__container');
+
+const projects = document.querySelectorAll('.project');
+
+// const projectType = projects.dataset.type;
+
+
+const projectChild = projects.childElementCount;
+
+
+// ToggleButton
+// const navbarToggleBtn = document.querySelector('.navbar__toggle-Btn');
+// const navbarList = document.querySelector('#navbar__list');
+// navbarToggleBtn.addEventListener('click', () => {
+//     if (navbarList.style.display == 'none') {
+//         navbarList.style.display = 'block';        
+//     } else{
+//         navbarList.style.display = 'none';        
+//     }
+// })

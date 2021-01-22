@@ -14,6 +14,10 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+    <!-- Arrow button to top -->
+    <a class="arrow">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div id="navbar__logo"><a href="#"><img src="img/favicon.png" alt="logo"></a></div>
@@ -130,38 +134,38 @@
         <h1>My Works</h1>
         <h2>Projects</h2>
         <div class="work__categories">
-            <button class="category__btn active">All<span class="category__count">4</span></button>
-            <button class="category__btn">Mini Project<span class="category__count">1</span></button>
-            <button class="category__btn">Clone Coding<span class="category__count">1</span></button>
-            <button class="category__btn">Relative Web<span class="category__count">2</span></button>
+            <button class="category__btn active" data-filter="*">All<span class="category__count">4</span></button>
+            <button class="category__btn" data-filter="mini-project">Mini Project<span class="category__count">1</span></button>
+            <button class="category__btn" data-filter="clone-coding">Clone Coding<span class="category__count">1</span></button>
+            <button class="category__btn" data-filter="relative-web">Relative Web<span class="category__count">2</span></button>
         </div>        
         <div class="project__container">
-            <a href="#" class="project">
+            <a href="#" class="project" data-type="mini-project">
                 <img src="img/Relative NavBar.png" class="project__img" alt="Relative NavBar">
                 <div class="project__description">
                     <div class="project__name">Relative NavBar</div>
-                    <div class="project__usingLanguage">Html Css</div>
+                    <div class="project__usingLanguage">HTML, CSS</div>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-type="clone-coding">
                 <img src="img/Youtube CloneCoding.png" class="project__img" alt="Youtube CloneCoding">
                 <div class="project__description">
                     <div class="project__name">Youtube Clone Coding</div>
-                    <div class="project__usingLanguage">with HTML, CSS</div>
+                    <div class="project__usingLanguage">HTML, CSS</div>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-type="relative-web">
                 <img src="img/Personal Portfolio.png" class="project__img" alt="Personal Portfolio">
                 <div class="project__description">
                     <div class="project__name">Portfolio</div>
-                    <div class="project__usingLanguage">with HTML, CSS, JavaScript</div>
+                    <div class="project__usingLanguage">HTML, CSS, JavaScript</div>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-type="relative-web">
                 <img src="img/Company Website.png" class="project__img" alt="Company Website">
                 <div class="project__description">
-                    <div class="project__name"></div>
-                    <div class="project__usingLanguage"></div>
+                    <div class="project__name">Company website</div>
+                    <div class="project__usingLanguage">HTML, CSS</div>
                 </div>
             </a>
         </div>
