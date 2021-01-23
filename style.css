@@ -256,6 +256,7 @@ h3 {
 }
 
 .category__btn {
+    position: relative;
     color: var(--color-white);
     border: solid 1px var(--color-white);
     border-radius: var(--radius);
@@ -263,17 +264,18 @@ h3 {
     padding: 8px 0;
     width: 250px;
     transition: all var(--animation-duration) ease;
+    margin: 4px 0;
 }
 
 .category__count {
-    position: relative;
+    position: absolute;
     display: inline-block;
     background-color: var(--color-darkgrey);
     border-radius: 50%;
     width: 24px;
     height: 24px;
     line-height: 24px;
-    margin-left: var(--base-space);
+    margin-left: 4px;
     color: var(--color-white);
     top: -20px;
     opacity: 0;
@@ -289,7 +291,7 @@ h3 {
 
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
-    top: 0;
+    top: 4px;
     opacity: 1;
 }
 
@@ -510,6 +512,24 @@ h3 {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+        /* Font-size */
+        --font-small: 8px;
+        --font-regular: 10px;
+        --font-medium: 14px;
+        --font-large: 18px;
+        --font-title: 42px;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-top: 70px;
+    }
+
     #navbar {
         flex-direction: row;
         align-items: flex-start;
@@ -531,25 +551,56 @@ h3 {
         display: block;
     }
 
-
-
     #about__container {
         flex-direction: column-reverse;
         align-items: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #aboutBox {
+        width: 80%;
+        margin: 0;
     }
 
     #myPicture {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         margin: 0 0 var(--base-space) 0;
+    }
+
+    .category__btn {
+        width: 150px;
+    }
+
+    .coming {
+        height: 150px;
+        line-height: 150px;
     }
 
     .project {
         flex-grow: 1;
     }
 
+    .testimonial,
+    .testimonial.reverse {
+        flex-direction: column;
+    }
+
     .testimonial__picture {
         width: 150px;
         height: 150px;
+        margin-bottom: var(--base-space);
     }
-}
+
+    #contact__name,
+    #contact__message,
+    #contact__email {
+        width: 80%;
+    }
+
+    .arrow>i {
+        bottom: 16px;
+        right: 16px;
+        font-size: 35px;
+    }
