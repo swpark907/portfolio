@@ -65,13 +65,21 @@ function scrollIntoView(selector) {
 
 // Filtering works
 const categoriesContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.project__container');
+const projects = document.querySelectorAll('.project');
+
 
 categoriesContainer.addEventListener('click', (event) => {
     const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
-    
+
     if(filter == null) {
         return;         
-    }    
+    }
+    const selected = document.querySelector('.category__btn.selected');
+    selected.classList.remove('selected');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('selected');    
+    
     projectContainer.classList.add('anim-out');
     projects.forEach((project) => {
         setTimeout(() => {
@@ -86,14 +94,12 @@ categoriesContainer.addEventListener('click', (event) => {
     })
 })
 
-const projectContainer = document.querySelector('.project__container');
-
-const projects = document.querySelectorAll('.project');
-
-// const projectType = projects.dataset.type;
+// Active
 
 
-const projectChild = projects.childElementCount;
+
+
+
 
 
 // ToggleButton
