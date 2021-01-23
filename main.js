@@ -17,7 +17,7 @@ document.addEventListener('scroll', () => {
 
 // Screen move to section when user click menu Button
 
-const navbarMenu = document.querySelector('#navbar__list');
+const navbarMenu = document.querySelector('#navbar');
 navbarMenu.addEventListener('click', (event) => {
     
     const target = event.target;
@@ -29,6 +29,7 @@ navbarMenu.addEventListener('click', (event) => {
 
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: 'smooth'});
+    navbarList.classList.remove('open');
 
 });
 
@@ -75,6 +76,7 @@ categoriesContainer.addEventListener('click', (event) => {
     if(filter == null) {
         return;         
     }
+    // Active
     const selected = document.querySelector('.category__btn.selected');
     selected.classList.remove('selected');
     const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
@@ -94,21 +96,10 @@ categoriesContainer.addEventListener('click', (event) => {
     })
 })
 
-// Active
-
-
-
-
-
-
 
 // ToggleButton
-// const navbarToggleBtn = document.querySelector('.navbar__toggle-Btn');
-// const navbarList = document.querySelector('#navbar__list');
-// navbarToggleBtn.addEventListener('click', () => {
-//     if (navbarList.style.display == 'none') {
-//         navbarList.style.display = 'block';        
-//     } else{
-//         navbarList.style.display = 'none';        
-//     }
-// })
+const navbarToggleBtn = document.querySelector('.navbar__toggle-Btn');
+const navbarList = document.querySelector('#navbar__list');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarList.classList.toggle('open');
+})
