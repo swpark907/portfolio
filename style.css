@@ -130,12 +130,14 @@ h3 {
     cursor: pointer;
     border-radius: var(--radius);
     transition: all var(--animation-duration) ease;
-    border: solid 1px transparent;
+}
+
+.navbar__list__items.active {
+    border: solid 1px var(--color-white);
 }
 
 #navbar ul li:hover {
     background-color: var(--color-violate-theme);
-    border: solid 1px var(--color-white);
 }
 
 #navbar__logo {
@@ -510,6 +512,16 @@ h3 {
     pointer-events: auto;
 }
 
+#contact {
+    background-color: var(--color-darkgrey);
+    height: auto;
+}
+
+#footer {
+    padding: 0px;
+    height: auto;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
     :root {
@@ -593,14 +605,9 @@ h3 {
         margin-bottom: var(--base-space);
     }
 
-    #contact__name,
-    #contact__message,
-    #contact__email {
-        width: 80%;
-    }
-
     .arrow>i {
         bottom: 16px;
         right: 16px;
         font-size: 35px;
     }
+}
