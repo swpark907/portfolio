@@ -581,6 +581,11 @@ h3 {
         margin: 0 0 var(--base-space) 0;
     }
 
+    .skill {
+        padding: 5px;
+        margin-bottom: 24px;
+    }
+
     .category__btn {
         width: 150px;
     }
