@@ -43,6 +43,7 @@ body {
     margin: 0px;
     cursor: default;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -187,6 +188,7 @@ h3 {
 
 #myPicture {
     background: center/cover url(img/mypicture2.jpg) no-repeat;
+    background-position: 50% 50%;
     border-radius: 50%;
     background-size: 550px 500px;
     border: solid 1px var(--color-white);
