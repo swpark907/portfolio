@@ -188,10 +188,10 @@ h3 {
 }
 
 #myPicture {
-    background: center/cover url(img/mypicture2.jpg) no-repeat;
+    background: center/cover url(img/mypicture3.jpg) no-repeat;
     background-position: 50% 50%;
     border-radius: 50%;
-    background-size: 550px 500px;
+    background-size: contain;
     border: solid 1px var(--color-white);
     width: 400px;
     height: 400px;
