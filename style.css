@@ -39,7 +39,8 @@
 
 /* Typhography */
 
-body {
+body,
+html {
     margin: 0px;
     cursor: default;
     font-family: 'Open Sans', sans-serif;
